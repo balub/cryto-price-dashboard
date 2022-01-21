@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 
 import "./App.scss";
 import AppBar from "../AppBar";
+import CryptoTable from "../CryptoTable";
 import Themes from "../../utils/Themes";
 
 function App() {
@@ -11,14 +12,17 @@ function App() {
     <ThemeProvider theme={Themes}>
       <div className="App">
         <AppBar />
-        <Typography
-          variant="h1"
-          component="div"
-          gutterBottom
-          className="heading"
-        >
-          Crypto Dash
-        </Typography>
+        <div className="AppCont">
+          <Typography
+            variant="h1"
+            component="div"
+            gutterBottom
+            className="heading"
+          >
+            Crypto Dash
+          </Typography>
+          <CryptoTable />
+        </div>
       </div>
     </ThemeProvider>
   );

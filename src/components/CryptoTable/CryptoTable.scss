@@ -1,0 +1,43 @@
+@import "../../scss/variables/_colors.scss";
+
+.cryptoTable {
+  width: 80%;
+  font-size: larger;
+  color: $textsecondary;
+  border-collapse: collapse; // 1
+  border-spacing: 0;
+}
+
+.cryptoTable_head {
+  font-size: medium;
+}
+
+.cryptoTable_head--tr {
+}
+
+.cryptoTable_head--th {
+  text-align: start;
+  &:first-child {
+    width: 40%;
+  }
+  &:nth-child(2) {
+    width: 20%;
+  }
+  &:nth-child(3) {
+    width: 20%;
+  }
+  &:last-child {
+    width: 20%;
+  }
+}
+
+.tableItem {
+  padding: 50px;
+  &:first-child {
+    background-color: green;
+    border-top: 50px solid transparent;
+  }
+}
+.tableItem__item {
+  text-align: start;
+}
