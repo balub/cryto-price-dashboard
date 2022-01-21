@@ -1,23 +1,26 @@
-import React from 'react';
-import './App.scss';
+import React from "react";
+import Typography from "@mui/material/Typography";
+import { ThemeProvider } from "@mui/material/styles";
+
+import "./App.scss";
+import AppBar from "../AppBar";
+import Themes from "../../utils/Themes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={Themes}>
+      <div className="App">
+        <AppBar />
+        <Typography
+          variant="h1"
+          component="div"
+          gutterBottom
+          className="heading"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Crypto Dash
+        </Typography>
+      </div>
+    </ThemeProvider>
   );
 }
 
